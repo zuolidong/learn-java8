@@ -35,6 +35,9 @@ import static java.util.stream.Collectors.*;
 public class Example1 {
 
     public static void main(String[] args) {
+
+        Project.buildData();
+
         List<Project> projects = Project.buildData();
         Double collect = projects.stream()
                 .collect(averagingInt(Project::getStars));
